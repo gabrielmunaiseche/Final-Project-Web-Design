@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kedai Coffee Abadi - Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Untuk ikon -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f5f5dc 0%, #bcb3a7 100%); /* Latar krem hangat */
+            color: #4b2e2a; /* Teks coklat gelap */
+        }
+        .navbar {
+            background: linear-gradient(90deg, #8b4513, #a0522d); /* Gradien coklat */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #fff !important;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #fff;
+            margin-bottom: 20px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+        .card-img-top {
+            border-radius: 15px 15px 0 0;
+            height: 200px;
+            object-fit: cover;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #228B22, #32CD32); /* Aksen hijau */
+            border: none;
+            border-radius: 25px;
+            transition: background 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #32CD32, #228B22);
+        }
+        .btn-danger {
+            border-radius: 25px;
+        }
+        .btn-success {
+            border-radius: 25px;
+        }
+        .cart-toggle {
+            cursor: pointer;
+            background: #8b4513;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .list-group-item {
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+        footer {
+            background: linear-gradient(90deg, #8b4513, #a0522d);
+            color: #fff;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-coffee"></i> Kedai Coffee Abadi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container py-5">
+        <h2 class="text-center mb-5" style="color: #8b4513; font-weight: 700;">Menu Kami</h2>
+        <div class="row">
+            <!-- Item 1: Espresso -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="card">
+                    <img src="images/espresso.jpg" class="card-img-top" alt="Espresso">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Espresso</h5>
+                        <p class="card-text text-muted">Kopi murni pekat dengan aroma tajam dan cita rasa kuat yang membangunkan jiwa.</p>
+                        <p class="fw-bold text-success">Rp 20.000</p>
+                        <button class="btn btn-primary" onclick="addToCart('Espresso', 20000)">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 2: Americano -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="card">
+                    <img src="images/americano.jpg" class="card-img-top" alt="Americano">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Americano</h5>
+                        <p class="card-text text-muted">Espresso yang dipadukan air panas, menghasilkan rasa ringan nan halus.</p>
+                        <p class="fw-bold text-success">Rp 20.000</p>
+                        <button class="btn btn-primary" onclick="addToCart('Americano', 20000)">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 3: Cappuccino -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="card">
+                    <img src="images/cappuccino.jpg" class="card-img-top" alt="Cappuccino">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Cappuccino</h5>
+                        <p class="card-text text-muted">Keseimbangan sempurna antara espresso, susu hangat, dan busa lembut.</p>
+                        <p class="fw-bold text-success">Rp 20.000</p>
+                        <button class="btn btn-primary" onclick="addToCart('Cappuccino', 20000)">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 4: Latte -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="card">
+                    <img src="images/latte2.jpg" class="card-img-top" alt="Latte">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Latte</h5>
+                        <p class="card-text text-muted">Lembut, creamy, dan ringan — teman santai di segala suasana.</p>
+                        <p class="fw-bold text-success">Rp 20.000</p>
+                        <button class="btn btn-primary" onclick="addToCart('Latte', 20000)">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 5: Mocha -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="card">
+                    <img src="images/mocha3.jpg" class="card-img-top" alt="Mocha">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mocha</h5>
+                        <p class="card-text text-muted">Perpaduan kopi dan cokelat yang manis elegan, penuh kehangatan.</p>
+                        <p class="fw-bold text-success">Rp 20.000</p>
+                        <button class="btn btn-primary" onclick="addToCart('Mocha', 20000)">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 6: Affogato -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="card">
+                    <img src="images/affogato.jpg" class="card-img-top" alt="Affogato">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Affogato</h5>
+                        <p class="card-text text-muted">Espresso panas disiram di atas es krim vanilla — kontras yang memikat.</p>
+                        <p class="fw-bold text-success">Rp 25.000</p>
+                        <button class="btn btn-primary" onclick="addToCart('Affogato', 25000)">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 7: Irish Coffee -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="card">
+                    <img src="images/irish-coffee.jpg" class="card-img-top" alt="Irish Coffee">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Irish Coffee</h5>
+                        <p class="card-text text-muted">Kopi hangat, gula, dan sentuhan whiskey, diselimuti krim lembut nan elegan.</p>
+                        <p class="fw-bold text-success">Rp 25.000</p>
+                        <button class="btn btn-primary" onclick="addToCart('Irish Coffee', 25000)">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 8: Hazelnut Dream -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="card">
+                    <img src="images/hazelnut-coffee.jpg" class="card-img-top" alt="Hazelnut Dream">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Hazelnut Dream</h5>
+                        <p class="card-text text-muted">Espresso, susu, dan sirup hazelnut berpadu manis gurih yang hangat dan berkelas.</p>
+                        <p class="fw-bold text-success">Rp 25.000</p>
+                        <button class="btn btn-primary" onclick="addToCart('Hazelnut Dream', 25000)">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 9: Caramel Macchiato -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="card">
+                    <img src="images/caramel-macchiato.jpg" class="card-img-top" alt="Caramel Macchiato">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Caramel Macchiato</h5>
+                        <p class="card-text text-muted">Kopi, susu, dan karamel lembut berpadu dalam harmoni rasa manis dan creamy.</p>
+                        <p class="fw-bold text-success">Rp 25.000</p>
+                        <button class="btn btn-primary" onclick="addToCart('Caramel Macchiato', 25000)">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 10: Citrus Espresso Tonic -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="card">
+                    <img src="images/citrus-espresso-tonic.jpg" class="card-img-top" alt="Citrus Espresso Tonic">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Citrus Espresso Tonic</h5>
+                        <p class="card-text text-muted">Espresso berpadu dengan tonic water dan sentuhan jeruk — segar, bergelembung, dan penuh kejutan rasa.</p>
+                        <p class="fw-bold text-success">Rp 25.000</p>
+                        <button class="btn btn-primary" onclick="addToCart('Citrus Espresso Tonic', 25000)">Pesan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Pesanan -->
+        <div class="mt-5">
+            <div class="cart-toggle" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i> Pesanan <i class="fas fa-chevron-down"></i>
+            </div>
+            <div id="cartContainer" style="display: none;">
+                <ul id="cart" class="list-group mb-3"></ul>
+                <button class="btn btn-danger" onclick="clearCart()">Batal Pesan</button>
+                <button class="btn btn-success ms-2" onclick="generateReceipt()">Bayar</button>
+            </div>
+        </div>
+
+        <!-- Modal Struk Pembayaran -->
+        <div class="modal fade" id="receiptModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Struk Pembayaran</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body" id="receiptContent">
+                        <!-- Konten struk akan diisi oleh JS -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-3">
+        <p>&copy; 2025 Kedai Coffee Abadi. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let cart = [];
+
+        function addToCart(item, price) {
+            cart.push({ item, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartList = document.getElementById('cart');
+            cartList.innerHTML = '';
+            cart.forEach((order, index) => {
+                const li = document.createElement('li');
+                li.className = 'list-group-item d-flex justify-content-between align-items-center';
+                li.innerHTML = `<span>${order.item} - Rp ${order.price.toLocaleString('id-ID')}</span>
+                                <button class="btn btn-sm btn-outline-danger" onclick="removeFromCart(${index})"><i class="fas fa-trash"></i></button>`;
+                cartList.appendChild(li);
+            });
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function clearCart() {
+            cart = [];
+            updateCart();
+        }
+
+        function toggleCart() {
+            const container = document.getElementById('cartContainer');
+            container.style.display = container.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function generateReceipt() {
+    if (cart.length === 0) {
+        alert('Keranjang kosong!');
+        return;
+    }
+    let total = 0;
+    let receiptText = `<h6>Struk Pembayaran Kasir Coffee</h6><ul class='list-unstyled'>`;
+    cart.forEach(order => {
+        receiptText += `<li>${order.item} - Rp ${order.price.toLocaleString('id-ID')}</li>`;
+        total += order.price;
+    });
+    receiptText += `</ul><hr><strong>Total: Rp ${total.toLocaleString('id-ID')}</strong><hr><em>Terima kasih telah berbelanja!</em>`;
+    document.getElementById('receiptContent').innerHTML = receiptText;
+    const modal = new bootstrap.Modal(document.getElementById('receiptModal'));
+    modal.show();
+    }
+</script>
+</body>

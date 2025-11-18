@@ -1,0 +1,142 @@
+/* === GLOBAL STYLE === */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f5dc 0%, #d2b48c 100%);
+    color: #4b2e2a;
+}
+
+/* === NAVBAR === */
+.navbar {
+    background: linear-gradient(90deg, #8b4513, #a0522d);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #fff !important;
+}
+
+/* === HERO SECTION === */
+.hero {
+    height: 65vh;
+    background-image: url('images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* === CARD GLOBAL === */
+.card {
+    border: none;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    border-radius: 15px 15px 0 0;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Khusus halaman yang pakai gambar tinggi besar */
+.about-img {
+    border-radius: 15px;
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* === CONTACT CARD === */
+.contact-card {
+    border: none;
+    border-radius: 15px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* === BUTTONS === */
+.btn-primary {
+    background: linear-gradient(90deg, #228B22, #32CD32);
+    border: none;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #32CD32, #228B22);
+}
+
+.btn-danger,
+.btn-success {
+    border-radius: 25px;
+}
+
+/* === CART TOGGLE === */
+.cart-toggle {
+    cursor: pointer;
+    background: #8b4513;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* === LIST GROUP === */
+.list-group-item {
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+/* === FOOTER === */
+footer {
+    background: linear-gradient(90deg, #8b4513, #a0522d);
+    color: #fff;
+}
+
+/* === ANIMATIONS === */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

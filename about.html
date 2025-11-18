@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kedai Coffee Abadi - About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Untuk ikon -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f5f5dc 0%, #d2b48c 100%); /* Latar krem hangat */
+            color: #4b2e2a; /* Teks coklat gelap */
+        }
+        .navbar {
+            background: linear-gradient(90deg, #8b4513, #a0522d); /* Gradien coklat */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #fff !important;
+        }
+        .about-img {
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 500px; /* Tinggi gambar lebih panjang ke bawah */
+            object-fit: cover;
+            width: 100%;
+        }
+        .about-img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+        footer {
+            background: linear-gradient(90deg, #8b4513, #a0522d);
+            color: #fff;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-coffee"></i> Kedai Coffee Abadi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container py-5">
+        <h2 class="text-center mb-5" style="color: #8b4513; font-weight: 700;">Tentang Kami</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6 fade-in">
+                <p>Kedai Coffee Abadi lahir dari sebuah kecintaan mendalam akan seni dan budaya kopi yang telah mengakar di negeri ini. Kami hadir untuk menjadi jembatan antara para pencinta kopi sejati dengan cita rasa autentik biji kopi pilihan, yang langsung kami ambil dari petani lokal yang berdedikasi untuk memastikan rasa terbaik.</p>
+                <p>Setiap tegukan kopi di Kedai Coffee Abadi adalah perjalanan rasa yang kami ciptakan dengan seksama — mengutamakan kualitas dan kesegaran biji kopi yang dipanggang dengan sempurna. Suasana kedai kami dirancang untuk memberikan kenyamanan modern sekaligus menghadirkan kehangatan yang ramah, sehingga Anda tidak hanya menikmati secangkir kopi biasa, melainkan juga sebuah pengalaman yang memanjakan indera dan jiwa.</p>
+                <p>Kedai Coffee Abadi didirikan pada tahun 2025 dengan visi menyajikan kopi berkualitas tinggi dalam suasana yang modern dan ramah.</p>
+            </div>
+            <div class="col-md-6 fade-in">
+                <img src="images/coffee-shop.jpg" alt="Coffee Shop" class="about-img" />
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-3">
+        <p>&copy; 2025 Kedai Coffee Abadi. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
